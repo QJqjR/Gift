@@ -1,0 +1,24 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+ <class name="com.jsu.entity.Order" table="tb_order">
+ <id name="oId" type="string" column="o_id"></id>
+ <property name="uId" type="string" column="u_id"/>
+ <property name="gPId" type="string" column="gp_id"/>
+ <property name="gId" type="string" column="g_id"/>
+  <property name="num" type="string" column="o_num"/>
+ <property name="time" type="string" column="pay_time"/>
+ <property name="money" type="string" column="pay_money"/>
+ <property name="account" type="string" column="pay_account"/>
+ <property name="type" type="integer" column="o_type"/>
+ <property name="addressId" type="string" column="address_id"/>
+ <property name="msg" type="string" column="o_msg"/>
+ 
+ </class>
+
+</hibernate-mapping>

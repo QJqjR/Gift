@@ -1,0 +1,20 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+ <class name="com.jsu.entity.Address" table="tb_address">
+ <id name="id" type="string" column="address_id"></id>
+<property name="uId" type="string" column="u_id"/>
+<property name="type" type="integer" column="address_type"/>
+<property name="name" type="string" column="receive_name"/>
+<property name="tel" type="string" column="receive_tel"/>
+<property name="address" type="string" column="receive_address"/>
+ 
+ 
+ </class>
+
+</hibernate-mapping>

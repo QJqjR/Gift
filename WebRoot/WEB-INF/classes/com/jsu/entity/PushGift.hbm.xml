@@ -1,0 +1,20 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+ <class name="com.jsu.entity.PushGift" table="tb_pushgift">
+ <id name="id" type="string" column="id"></id>
+ <property name="articalId" type="string" column="artical_id"/>
+ <property name="title" type="string" column="pushGift_title"/>
+ <property name="details" type="string" column="pushGift_details"/>
+ <property name="image" type="string" column="pushGift_image"/>
+ <property name="price" type="string" column="pushGift_price"/>
+ <property name="link" type="string" column="pushGift_link"/>
+
+  </class>
+
+</hibernate-mapping>

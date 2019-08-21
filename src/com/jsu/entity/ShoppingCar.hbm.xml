@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+ <class name="com.jsu.entity.ShoppingCar" table="tb_shoppingcar">
+ <id name="id" type="string" column="sc_id"/>
+  <property name="uId" type="string" column="u_id"/>
+  <property name="gPid" type="string" column="gp_id"/>
+  <property name="num" type="integer" column="sc_num"/>
+  <property name="time" type="string" column="sc_time"/>
+  <property name="title" type="string" column="u_title"/>
+ </class>
+
+</hibernate-mapping>

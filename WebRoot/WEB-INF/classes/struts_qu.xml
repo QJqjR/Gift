@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+
+<struts>
+
+	<package name="" namespace="/qu" extends="json-default">
+	
+		<!--用户注册 -->
+		<action name="register" class="registerAction" method="register">
+			<result name="success" type="json">
+				<param name="root">jsonData</param>
+			</result>
+			<!-- 验证码错误 -->
+			<result name="error" type="json">
+				<param name="root">jsonData</param>
+			</result>
+			<!-- 用户名已存在 -->
+			<result name="repeat" type="json">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+
+		<!-- 验证码 -->
+		<action name="createCaptcha" class="registerAction" method="createCaptcha">
+			<result name="createCaptchasuccess" type="json">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+
+		<!-- 用户登录 -->
+		<action name="login" class="loginAction" method="login">
+			<result name="success" type="json">
+				<param name="root">jsonData</param>
+			</result>
+			<result name="pwderror" type="json">
+				<param name="root">jsonData</param>
+			</result>
+			<result name="error" type="json">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+		
+		<!-- 添加收货地址 -->
+		<action name="addAddress" class="addAddressAction" method="addAddress">
+			<result name="success" type="json">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+		
+		<!-- 所有订单 -->
+		<action name="showAllOrder" class="allOrderAction" method="showAllOrder">
+			<result name="success" type="json">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+		
+		<!-- 待收货订单 -->
+		<action name="showWaitOrder" class="waitOrder" method="showWaitOrder">
+			<result name="success" type="json">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+		
+		<!-- 待评价订单 -->
+		<action name="showWaitCommOrder" class="waitCommentOrder" method="showWaitCommOrder">
+			<result name="success" type="json">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+
+		<!-- 个人中心 -->
+		<action name="showMsg" class="personalAction" method="showMsg">
+			<result>
+				/index.jsp
+			</result>
+		</action>
+
+		<!-- 测试 -->
+		<!--朱永丽 -->
+		<action name="test" class="PGAction" method="test">
+			<result name="success">
+				/index.jsp
+			</result>
+		</action>
+
+	</package>
+</struts>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+ <class name="com.jsu.entity.Refund" table="tb_refund">
+ <id name="id" type="string" column="r_id"></id>
+<property name="oid" type="string" column="o_id"/>
+<property name="time" type="string" column="refund_time"/>
+<property name="money" type="string" column="refund_money"/>
+<property name="cause" type="string" column="refund_cause"/>
+<property name="account" type="string" column="refund_account"/>
+<property name="image" type="string" column="refund_image"/>
+<property name="desc" type="string" column="refund_desc"/>
+<property name="uid" type="string" column="u_id"/>
+<property name="gid" type="string" column="g_id"/>
+<property name="gpid" type="string" column="gp_id"/>
+ </class>
+
+</hibernate-mapping>

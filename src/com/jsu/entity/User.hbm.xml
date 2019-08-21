@@ -1,0 +1,24 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+ <class name="com.jsu.entity.User" table="tb_user">
+ <id name="id" type="string" column="u_id"></id>
+ <property name="tel" type="string" column="u_tel"/>
+ <property name="email" type="string" column="u_email"/>
+ <property name="name" type="string" column="u_name"/>
+ <property name="pwd" type="string" column="u_pwd"/>
+ <property name="image" type="string" column="u_image"/>
+ <property name="sex" type="string" column="u_sex"/>
+ <property name="age" type="integer" column="u_age"/>
+ <property name="hobby" type="string" column="u_hobby"/>
+ <property name="createTime" type="string" column="u_createTime"/>
+ <property name="status" type="integer" column="u_status"/>
+ <property name="purse" type="string" column="u_purse"/>
+  </class>
+
+</hibernate-mapping>

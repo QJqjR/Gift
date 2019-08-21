@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+ <class name="com.jsu.entity.Collect" table="tb_collect">
+  <composite-id><!--联合主键，student表中的主键为(student_name,card_id)-->  
+           <key-property name="uId" column="u_id" type="string"></key-property><!--name及cardID为Student类中的属性-->  
+           <key-property name="gId" column="g_id" type="string"></key-property>  
+        </composite-id>  
+
+<property name="time" type="string" column="collect_time"/>
+ </class>
+</hibernate-mapping>

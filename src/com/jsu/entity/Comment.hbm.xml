@@ -1,0 +1,25 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+   <class name="com.jsu.entity.Comment"  table="tb_comment">
+      <id name="id" type="string" column="c_id"/>
+      <property name="uId" type="string" column="u_id"/>
+      <property name="gId" type="string" column="g_id"/>
+      <property name="detail" type="string" column="c_detail"/>
+      <property name="redetail" type="string" column="c_redetail"/>
+      <property name="time" type="string" column="c_time"/>
+      <property name="image" type="string" column="c_image"/>
+      <property name="rate"   type="integer" column="c_rate"/>
+      <property name="review"   type="integer" column="c_review"/>
+      <!-- <set name="commentadds" fetch="join" cascade="all">
+      <key column="c_id"></key>
+      <one-to-many class="com.jsu.entity.Commentadd"/>
+      </set> -->
+   </class>
+</hibernate-mapping>
+

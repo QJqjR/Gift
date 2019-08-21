@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+   <class name="com.jsu.entity.Commentadd"  table="tb_commentadd">
+      <id name="id" type="string" column="ca_id"/>
+      <property name="cId" type="string" column="c_id"/>
+      <property name="details" type="string" column="ca_details"/>
+      <property name="time" type="string" column="ca_time"/>
+      <property name="image" type="string" column="ca_image"/>
+   </class>
+</hibernate-mapping>
+

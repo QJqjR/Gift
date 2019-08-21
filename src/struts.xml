@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+
+<struts>
+
+	<!-- 引入Angel的struts.xml文件 -->
+	<!-- <include file="struts_qu.xml"/> <include file="struts_liu.xml"/> <include 
+		file="struts_chen.xml"/> -->
+
+	<package name="" namespace="/" extends="json-default">
+
+		<!-- Angel -->
+		<!--用户注册 -->
+		<action name="register" class="registerAction" method="register">
+			<result name="success" type="json">
+				<param name="root">jsonData</param>
+			</result>
+			<!-- 验证码错误 -->
+			<result name="error" type="json">
+				<param name="root">jsonData</param>
+			</result>
+			<!-- 用户名已存在 -->
+			<result name="repeat" type="json">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+
+		<!-- 验证码 -->
+		<action name="createCaptcha" class="registerAction" method="createCaptcha">
+			<result name="createCaptchasuccess" type="json">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+
+		<!-- 用户登录 -->
+		<action name="login" class="loginAction" method="login">
+			<result name="success" type="json">
+				<param name="root">jsonData</param>
+			</result>
+			<result name="pwderror" type="json">
+				<param name="root">jsonData</param>
+			</result>
+			<result name="error" type="json">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+
+		<!-- 添加收货地址 -->
+		<action name="addAddress" class="addAddressAction" method="addAddress">
+			<result name="success" type="json">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+
+		<!-- 查询所有地址 -->
+		<action name="findAllAddress" class="addAddressAction" method="findAllAddress">
+			<result name="success" type="json">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+
+		<!-- 所有订单 -->
+		<action name="showAllOrder" class="allOrderAction" method="showAllOrder">
+			<result name="success" type="json">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+
+		<!-- 待收货订单 -->
+		<action name="showWaitOrder" class="waitOrder" method="showWaitOrder">
+			<result name="success" type="json">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+
+		<!-- 待评价订单 -->
+		<action name="showWaitCommOrder" class="waitCommentOrder"
+			method="showWaitCommOrder">
+			<result name="success" type="json">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+
+		<!-- 查询礼品参数 -->
+		<action name="GParams" class="com.jsu.action.qu.GParamsAction"
+			method="GParams">
+			<result name="success" type="json">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+
+		<!-- 礼品排序 -->
+		<action name="giftSort" class="giftSortAction" method="giftSort">
+			<result name="success" type="json">
+				<param name="root">jsondata</param>
+			</result>
+		</action>
+
+		<!-- 商品下架或上架 -->
+		<action name="changeGiftSta" class="aboutGiftAction" method="changeGiftSta">
+			<result name="success" type="json">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+
+		<!-- 重置密码 用户已邮件的形式接收 -->
+		<action name="resetPwd" class="userAction" method="resetPwd">
+			<result name="success" type="json">
+				<param name="root">jsondata</param>
+			</result>
+		</action>
+
+		<!-- 修改礼品 -->
+		<action name="updateGift" class="updateGiftAction" method="updateGift">
+			<result name="success" type="json">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+
+		<!-- 搜索礼品后排序 -->
+		<action name="sortByKwd" class="giftSortAction" method="sortByKwd">
+			<result name="success" type="json">
+				<param name="root">jsondata</param>
+			</result>
+		</action>
+
+		<!-- 提交退款申请 -->
+		<action name="addRefund" class="refundAction" method="addRefund">
+			<result name="success" type="json">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+
+		<!-- 个人中心 -->
+		<!-- <action name="showMsg" class="personalAction" method="showMsg"> <result> 
+			/index.jsp </result> </action> -->
+
+
+		<!-- 柳海杰 -->
+		<!-- 上传图片 -->
+		<action name="upload" class="uploadAction" method="upload">
+			<result type="json" name="success">
+				<param name="root">fileFileName</param>
+			</result>
+		</action>
+
+		<!-- 添加礼品 -->
+		<action name="addGift" class="giftAction" method="addGift">
+			<result type="json" name="success">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+
+		<!-- 获取礼品列表 -->
+		<action name="getGiftList" class="giftAction" method="getGiftList">
+			<result type="json" name="success">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+
+		<!-- 添加礼品参数 -->
+		<action name="addGiftParam" class="giftParamAction" method="addGiftParam">
+			<result type="json" name="success">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+
+
+		<!--陈东泽 -->
+		<!-- 添加评论 -->
+		<action name="addcomment" class="commentAction" method="addcomment">
+			<result name="success" type="json">
+				<param name="root">jsondata</param>
+			</result>
+		</action>
+
+		<!-- 更新评论 -->
+		<action name="updatecomment" class="commentAction" method="updatecomment">
+			<result name="success" type="json">
+				<param name="root">jsondata</param>
+			</result>
+		</action>
+
+		<!-- 按照需求查找某个商品的评论 -->
+		<action name="findcomment" class="commentAction" method="findcomment">
+			<result name="success" type="json">
+				<param name="root">jsondata</param>
+			</result>
+		</action>
+
+		<!-- 查找所有评论 -->
+		<action name="findAllComment" class="commentAction" method="findAllComment">
+			<result name="success" type="json">
+				<param name="root">jsondata</param>
+			</result>
+		</action>
+
+		<!-- 查找某个商品的所有追评 -->
+		<action name="findcommentadd" class="commentaddAction" method="findcommentadd">
+			<result name="success" type="json">
+				<param name="root">jsondata</param>
+			</result>
+		</action>
+
+		<!-- 添加追评 -->
+		<action name="addcommentadd" class="commentaddAction" method="addcommentadd">
+			<result name="success" type="json">
+				<param name="root">jsondata</param>
+			</result>
+		</action>
+
+		<!-- 查询用户 -->
+		<action name="finduser" class="userAction" method="finduser">
+			<result name="success" type="json">
+				<param name="root">jsondata</param>
+			</result>
+		</action>
+
+		<!-- 礼品搜索 -->
+		<action name="findgift" class="giftSortAction" method="findgift">
+			<result name="success" type="json">
+				<param name="root">jsondata</param>
+			</result>
+		</action>
+
+		<!-- 查找收藏 -->
+		<action name="findcollect" class="findCollectAction" method="findcollect">
+			<result name="success" type="json">
+				<param name="root">jsondata</param>
+			</result>
+		</action>
+
+		<!-- 唐颖 -->
+		<!-- 主页前action -->
+		<action name="index" class="indexAction" method="indexAction">
+			<result name="success" type="json">
+				<param name="root">obj</param>
+			</result>
+		</action>
+
+		<!-- 进入详情页面action -->
+		<action name="giftDetails" class="indexDetailsAction" method="indexDetailsDao">
+			<result name="success" type="json">
+				<param name="root">obj</param>
+			</result>
+		</action>
+
+		<!-- 添加到购物车addCar -->
+		<action name="addCar" class="shoppingCarAction" method="addCar">
+			<result name="success" type="json">
+				<param name="root">obj</param>
+			</result>
+		</action>
+
+		<!-- 购物车页面 -->
+		<action name="showShoppingCar" class="shoppingCarAction"
+			method="shoppingCar2">
+			<result name="success" type="json">
+				<param name="root">obj</param>
+			</result>
+		</action>
+
+		<!-- 弹出购物车列表 -->
+		<action name="displayShoppingCar" class="shoppingCarAction"
+			method="shoppingCar1">
+			<result name="success" type="json">
+				<param name="root">obj</param>
+			</result>
+		</action>
+
+		<!-- 删除||弹出购物车 -->
+		<action name="deleteCarByScId" class="shoppingCarAction"
+			method="deleteCarByScId">
+			<result name="success" type="json">
+				<param name="root">obj</param>
+			</result>
+		</action>
+
+		<!-- 删除||购物车页面，单个商品删除 -->
+		<action name="delByScId" class="shoppingCarAction" method="delByScId">
+			<result name="success" type="json">
+				<param name="root">obj</param>
+			</result>
+		</action>
+
+		<!-- 批量删除商品||购物车 -->
+		<action name="delAll" class="shoppingCarAction" method="delAll">
+			<result name="success" type="json">
+				<param name="root">obj</param>
+			</result>
+		</action>
+
+		<!-- 购物车，更新数量 -->
+		<action name="changeNumByScId" class="shoppingCarAction"
+			method="changeNumByScId">
+			<result name="success" type="json">
+				<param name="root">obj</param>
+			</result>
+		</action>
+
+		<!-- 立即购买，单个商品 -->
+		<action name="confirmOrderSingten" class="confirmOrderAction"
+			method="confirmOrderSingten">
+			<result name="success" type="json">
+				<param name="root">obj</param>
+			</result>
+		</action>
+
+		<!-- 多选购买多个商品，和单选跳转页面不是同一个 -->
+		<action name="confirmOrderProperty" class="confirmOrderAction"
+			method="confirmOrderProperty">
+			<result name="success" type="json">
+				<param name="root">obj</param>
+			</result>
+		</action>
+
+		<!-- 添加收藏 -->
+		<action name="yesCollect" class="collectAction" method="yesCollect">
+			<result name="success" type="json">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+
+		<!-- 取消收藏 -->
+		<action name="noCollect" class="collectAction" method="noCollect">
+			<result name="success" type="json">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+
+		<!-- 购买单个商品 -->
+		<action name="buySingloten" class="buyAction" method="buySingloten">
+			<result name="success" type="json">
+				<param name="root">jsonData</param>
+			</result>
+			<result name="error" type="json">
+				<param name="root">jsonData</param>
+			</result>
+			<result name="reseveError" type="json">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+
+		<!-- 购买多个商品 -->
+		<action name="buyProperty" class="buyAction" method="buyProperty">
+			<result name="success" type="json">
+				<param name="root">jsonData</param>
+			</result>
+			<result name="error" type="json">
+				<param name="root">jsonData</param>
+			</result>
+			<result name="reseveError" type="json">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+
+		<!-- 根据oid更新payid -->
+		<action name="updatePayAccount" class="payAction" method="updatePayAccount">
+			<result name="success" type="json">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+
+		<!-- 查看订单 -->
+		<action name="viewOrder" class="orderAction" method="viewOrder">
+			<result name="success" type="json">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+
+		<!-- 显示用户信息 -->
+		<action name="showUserInfor" class="userAction" method="showUserInfor">
+			<result name="success" type="json">
+				<param name="root">jsondata</param>
+			</result>
+		</action>
+
+		<!-- 修改用户信息 -->
+		<action name="updateUserInfor" class="userAction" method="updateUserInfor">
+			<result name="success" type="json">
+				<param name="root">jsondata</param>
+			</result>
+		</action>
+
+		<!-- 前十销售量 -->
+		<action name="tenTopGiftList" class="saleAction" method="tenTopGiftList">
+			<result name="success" type="json">
+				<param name="root"></param>
+			</result>
+		</action>
+		
+		<!-- 月销售 -->
+		<action name="monthSale" class="saleAction" method="monthSale">
+			<result type="json">
+				<param name="root">obj</param>
+			</result>
+		</action>
+		
+		<!-- 按年龄统计 -->
+		<action name="statisAge" class="saleAction" method="statisAge">
+			<result type="json">
+				<param name="root">obj</param>
+			</result>
+		</action>
+		
+		<!-- 显示订单列表 -->
+		<action name="getOrderList" class="saleAction" method="showOrderList">
+			<result type="json">
+				<param name="root">obj</param>
+			</result>
+		</action>
+		
+		<!-- 显示退款列表 -->
+		<action name="getRetundList" class="saleAction" method="showRefundList">
+			<result type="json">
+				<param name="root">obj</param>
+			</result>
+		</action>
+
+		<!-- 朱永丽 -->
+		<!-- 显示文章 -->
+		<action name="showArtical" class="articalAction" method="showArtical">
+			<result name="success" type="json">
+				<param name="root">jsondata</param>
+			</result>
+		</action>
+
+		<!-- 添加文章 -->
+		<action name="addArtical" class="articalAction" method="addArtical">
+			<result name="success" type="json">
+				<param name="root">jsondata</param>
+			</result>
+		</action>
+
+		<!-- 更新文章 -->
+		<action name="updateArtical" class="articalAction" method="updateArtical">
+			<result name="success" type="json">
+				<param name="root">jsondata</param>
+			</result>
+		</action>
+
+		<!-- 删除文章 -->
+		<action name="deleteArtical" class="articalAction" method="deleteArtical">
+			<result name="deletesuccess" type="json">
+				<param name="root">jsondata</param>
+			</result>
+		</action>
+
+		<!-- 根据articalid 查找pushGift -->
+		<action name="findPushGift" class="findPushGiftAction" method="findPushGift">
+			<result name="success" type="json">
+				<param name="root">jsondata</param>
+			</result>
+		</action>
+
+		<!-- 根据articalid 添加 pushGift -->
+		<action name="addPushGift" class="findPushGiftAction" method="addPushGift">
+			<result name="success" type="json">
+				<param name="root">jsondata</param>
+			</result>
+		</action>
+
+		<!-- 根据articalid 删除 pushGift -->
+		<action name="deletePushGift" class="findPushGiftAction"
+			method="deletePushGift">
+			<result name="success" type="json">
+				<param name="root">jsondata</param>
+			</result>
+		</action>
+
+		<!-- 根据id 更新 pushGift -->
+		<action name="updatePushGift" class="findPushGiftAction"
+			method="updatePushGift">
+			<result name="success" type="json">
+				<param name="root">jsondata</param>
+			</result>
+		</action>
+
+		<!-- 退款与确认退款 -->
+		<action name="cancelOrder" class="updateOrderTypeAction"
+			method="cancelOrder">
+			<result name="success" type="json">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+
+		<!-- 根据类型查找礼物 -->
+		<action name="findGiftByType" class="findGiftAction" method="findGiftByType">
+			<result name="success" type="json">
+				<param name="root">jsondata</param>
+			</result>
+		</action>
+
+		<!-- 根据送给谁查找礼物 -->
+		<action name="findGiftByPartner" class="findGiftAction" method="findGiftByPartner">
+			<result name="success" type="json">
+				<param name="root">jsondata</param>
+			</result>
+		</action>
+
+		<!-- 确认收货 -->
+		<action name="comfirmGift" class="updateOrderTypeAction"
+			method="comfirmGift">
+			<result name="success" type="json">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+
+		<!-- 修改礼品参数 -->
+		<action name="modifyGift" class="modifyGiftAction" method="modifyGift">
+			<result name="success" type="json">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+
+
+		<!-- 陈东泽导出数据/数据分析 -->
+		<action name="dataAnalysisrefund" class="com.jsu.action.chen.DataAnalysisAction"
+			method="dataAnalysisrefund">
+			<result name="success" type="json">
+				<param name="root">jsondata</param>
+			</result>
+		</action>
+
+		<action name="dataAnalysissexmoneyorder" class="com.jsu.action.chen.DataAnalysisAction"
+			method="dataAnalysissexmoneyorder">
+			<result name="success" type="json">
+				<param name="root">jsondata</param>
+			</result>
+		</action>
+
+		<action name="dataAnalysisagemoneyorder" class="com.jsu.action.chen.DataAnalysisAction"
+			method="dataAnalysisagemoneyorder">
+			<result name="success" type="json">
+				<param name="root">jsondata</param>
+			</result>
+		</action>
+
+		<action name="dataAnalysisagesexmoneyorder" class="com.jsu.action.chen.DataAnalysisAction"
+			method="dataAnalysisagesexmoneyorder">
+			<result name="success" type="json">
+				<param name="root">jsondata</param>
+			</result>
+		</action>
+
+		<action name="excelgift" class="excelAction" method="excelgift">
+		</action>
+
+		<action name="excelorder" class="excelAction" method="excelorder">
+		</action>
+		<!-- 进入详情页面判断是否收藏 -->
+		<action name="isCollect" class="indexDetailsAction" method="isCollect">
+		    <result name="success">
+		       <param name="root">obj</param>
+		    </result>
+		</action>
+
+	</package>
+</struts>

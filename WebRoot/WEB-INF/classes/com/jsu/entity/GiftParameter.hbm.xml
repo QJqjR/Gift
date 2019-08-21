@@ -1,0 +1,21 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+ <class name="com.jsu.entity.GiftParameter" table="tb_giftparameter">
+ <id name="id" type="string" column="gp_id"></id>
+ <property name="gId" type="string" column="g_id"/>
+ <property name="reseve" type="integer" column="gp_reseve"/>
+ <property name="type" type="string" column="gp_type"/>
+ <property name="price" type="double" column="gp_price"/>
+ <property name="title" type="string" column="gp_title"/>
+ <property name="parameter" type="string" column="gp_parameter"/>
+ <property name="image" type="string" column="gp_image"/>
+ 
+ </class>
+
+</hibernate-mapping>

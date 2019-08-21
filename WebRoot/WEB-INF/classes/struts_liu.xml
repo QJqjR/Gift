@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+
+<struts>
+
+	<package name="" namespace="/liu" extends="json-default">
+		<action name="upload" class="uploadAction" method="upload">
+			<result type="json" name="success">
+				<param name="root">fileFileName</param>
+			</result>
+		</action>
+		<action name="addGift" class="giftAction" method="addGift">
+			<result type="json" name="success">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+		<action name="getGiftList" class="giftAction" method="getGiftList">
+			<result type="json" name="success">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+		
+		<action name="addGiftParam" class="giftParamAction" method="addGiftParam">
+			<result type="json" name="success">
+				<param name="root">jsonData</param>
+			</result>
+		</action>
+		
+	</package>
+</struts>
+
+
+
+
+
+
+
+
+
+
+
+
+

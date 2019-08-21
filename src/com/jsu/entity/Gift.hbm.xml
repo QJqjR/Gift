@@ -1,0 +1,31 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+ <class name="com.jsu.entity.Gift" table="tb_gift">
+ <id name="id" type="string" column="g_id"></id>
+ <property name="title" type="string" column="g_title"/>
+ <property name="oprice" type="string" column="g_oprice"/>
+ <property name="nprice" type="string" column="g_nprice"/>
+ <property name="comment" type="integer" column="g_comment"/>
+ <property name="deal" type="integer" column="g_deal"/>
+ <property name="address" type="string" column="g_address"/>
+ <property name="fare" type="double" column="g_fare"/>
+ <property name="image" type="string" column="g_image"/>
+ <property name="detailsImage" type="string" column="g_detailsImage"/>
+ <property name="time" type="string" column="g_time"/>
+ <property name="brand" type="string" column="g_brand"/>
+ <property name="parameter" type="string" column="g_parameter"/>
+ <property name="sale" type="integer" column="g_sale"/>
+ <property name="situation" type="string" column="g_situation"/>
+ <property name="partner" type="string" column="g_partner"/>
+ <property name="status" type="integer" column="g_status"/>
+ <property name="type" type="string" column="g_type"/>
+ 
+ </class>
+
+</hibernate-mapping>

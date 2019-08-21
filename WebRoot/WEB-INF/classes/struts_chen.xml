@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+
+<struts>
+
+	<package name="" namespace="/chen" extends="json-default">
+	<action name="addcomment" class="com.jsu.action.chen.CommentAction" method="addcomment">
+	 <result name="success" type="json">
+	 <param name="root">jsondata</param>
+	 </result>
+	</action>
+	<action name="updatecomment" class="com.jsu.action.chen.CommentAction" method="updatecomment">
+	 <result name="success" type="json">
+	 <param name="root">josndata</param>
+	 </result>
+	</action>
+	<action name="findcomment" class="com.jsu.action.chen.CommentAction" method="findcomment">
+	 <result name="success" type="json">
+	 <param name="root">josndata</param>
+	 </result>
+	</action>
+	<action name="findcommentadd" class="com.jsu.action.chen.CommentaddAction" method="findcommentadd">
+	 <result name="success" type="json">
+	 <param name="root">josndata</param>
+	 </result>
+	</action>
+	<action name="addcommentadd" class="com.jsu.action.chen.CommentaddAction" method="addcommentadd">
+	 <result name="success" type="json">
+	 <param name="root">josndata</param>
+	 </result>
+	</action>
+	<action name="finduser" class="com.jsu.action.chen.UserAction" method="finduser">
+	<result name="success" type="json">
+	 <param name="root">josndata</param>
+	 </result>
+	</action>
+	<action name="updateuser" class="com.jsu.action.chen.UserAction" method="updateuser">
+	<result name="success" type="json">
+	 <param name="root">josndata</param>
+	 </result>
+	</action>
+	<!-- <action name="addgift" class="com.jsu.action.chen.GiftAction" method="addgift">
+	 <result name="success">
+	 </result>
+	</action>
+	<action name="add" class="com.jsu.action.chen.GiftAction" method="add">
+	 <result name="success">
+	 /index.jsp
+	 </result>
+	</action> -->
+	</package>
+</struts>
+
+
+
+
+
+
+
+
+
+
+
+
+
